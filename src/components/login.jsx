@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from '../components/common/footer';
 
 class Login extends Component {
   render() {
@@ -27,7 +28,7 @@ class Login extends Component {
               placeholder="Email Address *"
               type="email"
               required
-              autocomplete="off"
+              autoComplete="off"
             />
           </div>
 
@@ -36,7 +37,7 @@ class Login extends Component {
               placeholder="password *"
               type="password"
               required
-              autocomplete="off"
+              autoComplete="off"
             />
           </div>
 
@@ -47,6 +48,8 @@ class Login extends Component {
             <a href="user/user.html">Log In</a>
           </button>
         </div>
+        <Footer/>
+
       </div>
     );
   }
