@@ -14,13 +14,13 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader']
       },
       { test: /\.(jpg|jpeg|png|gif|mp3|mp4|svg)$/, loaders: ['file-loader'] }
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.es6']
+    extensions: ['.js', '.jsx', '.es6','.css']
   },
   output: {
     publicPath: '/'
@@ -30,8 +30,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '../src', 'index.html')
     }),
-    new CopyWebpackPlugin([
-      { from: './src/assets/images', to: 'assets/images' }
-    ])
   ]
 };
