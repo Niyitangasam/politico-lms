@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import Footer from '../components/common/footer';
 import { Link } from 'react-router-dom'
 
-class Login extends Component {
+class Reset extends Component {
   state = {
-    email: '',
-    password: ''
+    email: ''
   };
   render() {
     return (
@@ -22,11 +20,12 @@ class Login extends Component {
             </li>
           </ul>
         </div>
-        <h1 id="top_form">Welcome To Politico</h1>
 
         <div className="form">
           <div className="field-wrap">
-            <h1>Please login!</h1>
+            <h2>
+              Please provide Email used to sign Up, will send a reset link.
+            </h2>
           </div>
           <div className="field-wrap">
             <input
@@ -37,26 +36,11 @@ class Login extends Component {
             />
           </div>
 
-          <div className="field-wrap">
-            <input
-              placeholder="password *"
-              type="password"
-              required
-              autoComplete="off"
-            />
-          </div>
-
-          <p className="forgot">
-            <Link to="reset">Forgot Password?</Link>
-          </p>
-          <button className="button button-block">
-            <Link to="user">Log In</Link>
-          </button>
+          <button className="button button-block">Reset</button>
         </div>
-        <Footer />
       </div>
     );
   }
 }
 
-export default Login;
+export default Reset;
